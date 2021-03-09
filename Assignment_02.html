@@ -1,0 +1,55 @@
+<!DOCTYPE  html>
+<html>
+<head>
+    <title>Xena Events</title>
+    <style>
+        body {
+            
+			border: 2px solid gray;
+			margin: 1cm;
+			padding: 1cm;
+			border-radius: 20px;
+        }
+        table {
+            width: 60%;
+        }
+    </style>
+</head>
+<body >
+<h1>Hot Balloon Riding <img src="https://images.freecreatives.com/wp-content/uploads/2016/03/Awesome-Batman-Logo-Wallpaper.jpg" alt="VIDEO LOGO" height="50" width="50"></h1>
+<h3>Xena Events</h3>
+ <form name="register" onsubmit="func()">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" pattern="[A-Za-z]+" required ></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="number" name="age" min="18" steps="1" required ></td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="email" name="email" required ></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <input list="venue" id="select" required/>
+                        <datalist id="venue">
+                            <option value="Bangalore">
+                            <option value="Rajkot">
+                            <option value="Vijag">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr style="height: 12pt;"></tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Register"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

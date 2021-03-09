@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Statistics</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            canvas {
+                border: 2px solid #d1d1d1;
+                border-radius: 10px;
+                padding: 25px;
+                background-color: #f1f1f1
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>BCCI</h1>
+        <h3>T20 Cricket Statistics</h3>
+
+        <canvas id="bcci" width="500" height="400">Your browser does not support the HTML5 canvas tag.</canvas>
+
+        <script>
+            var x = document.getElementById('bcci');
+            var sam = x.getContext('2d');
+			sections=5
+			Val_max = 280;
+			Val_min = 0;
+			var stepSize = 40;
+			width=500
+			height=400
+            sam.font = '6px';
+            sam.lineWidth = 1;
+            sam.beginPath();
+			m=140
+			for (i=0;i<sections-1;i++) {
+					sam.moveTo(m+i*100,370);
+					sam.lineTo(m+i*100,0)
+					sam.strokeText(i*5,36+i*100,height);
+			}
+			m=280
+			n=20
+			for (i=0;i<7;i++) {
+					sam.moveTo(stepSize,315-i*50);
+					sam.lineTo(width,315-i*50)
+					sam.strokeText(m-i*stepSize,0,n+i*50);
+			}
+            sam.stroke();
+            sam.beginPath();
+            sam.moveTo(40,400);
+            sam.lineTo(40,0);
+            sam.moveTo(0,370);
+            sam.lineTo(500,370);
+            sam.stroke();
+
+            sam.beginPath();
+            sam.fillText('RUNS ',50,10);
+            sam.fillText('OVERS ',450,360);
+
+            sam.beginPath();
+			sam.lineWidth=3;
+			sam.moveTo(140, 315); //(5/40)
+			sam.lineTo(240, 275); //(10/75)
+			sam.moveTo(240, 275);
+			sam.lineTo(340, 190);//(15/140)
+			sam.moveTo(340, 190);
+            sam.stroke();
+        </script>
+
+    </body>
+</html>
